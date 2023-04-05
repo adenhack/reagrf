@@ -3,7 +3,38 @@ import { Table } from "reactstrap";
 import "./Stok.css";
 
 export default class Stok extends Component {
-  
+  state = { toplamdagitilangidakolisi: "", toplamdagitilanhijyenkolisi: "", toplamgelentir: "" }
+
+  async componentDidMount() {
+    await this.tdgkolisi();
+    await this.tdhkolisi();
+    await this.tgtsayisi();
+  }
+
+  tdgkolisi = async () => {
+    let toplam = 0;
+    await this.props.veriler.map(veri => (
+      toplam = veri.dagitilangidakolisi + toplam,
+      this.setState({ toplamdagitilangidakolisi: toplam })
+    ))
+  }
+
+  tdhkolisi = async () => {
+    let toplam = 0;
+    await this.props.veriler.map(veri => (
+      toplam = veri.dagitilanhijyenkolisi + toplam,
+      this.setState({ toplamdagitilanhijyenkolisi: toplam })
+    ))
+  }
+
+  tgtsayisi = async () => {
+    let toplam = 0;
+    await this.props.veriler.map(veri => (
+      toplam = veri.gelentir + toplam,
+      this.setState({ toplamgelentir: toplam })
+    ))
+  }
+
   renderFull() {
     return (
       <div className="m-5">
@@ -22,7 +53,7 @@ export default class Stok extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.veriler.reverse().map((veri, index) => (
+            {this.props.veriler.map((veri, index) => (
               <tr key={index}>
                 <th>{veri.tarih}</th>
                 <td>{veri.sosyalmarket}</td>
@@ -35,6 +66,17 @@ export default class Stok extends Component {
                 <td>{veri.toplamarac}</td>
               </tr>
             ))}
+            <tr>
+              <th>TOPLAM</th>
+              <th></th>
+              <th>{this.state.toplamgelentir}</th>
+              <th>{this.state.toplamdagitilangidakolisi}</th>
+              <th>{this.state.toplamdagitilanhijyenkolisi}</th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
           </tbody>
         </Table>
       </div>
@@ -59,7 +101,7 @@ export default class Stok extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.search.reverse().map((veri, index) => (
+            {this.props.search.map((veri, index) => (
               <tr key={index}>
                 <th>{veri.tarih}</th>
                 <td>{veri.sosyalmarket}</td>

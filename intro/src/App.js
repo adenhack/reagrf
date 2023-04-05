@@ -6,6 +6,7 @@ import Navi from "./Navi";
 import MevcutGidaKolisi from "./MevcutGidaKolisi";
 import DagitilanHijyenKolisi from "./DagitilanHijyenKolisi";
 import MevcutHijyenKolisi from "./MevcutHijyenKolisi";
+import SonGirilenVeriler from "./SonGirilenVeriler";
 
 export default class App extends Component {
   state = {
@@ -40,12 +41,13 @@ export default class App extends Component {
             <Col>
             <Stok
                 search={this.state.search.reverse()}
-                veriler={this.state.veriler}
+                veriler={this.state.veriler.reverse()}
               />
-              <DagitilanGidaKolisi veriler={this.state.veriler} />
-              <MevcutGidaKolisi veriler={this.state.veriler} />
-              <DagitilanHijyenKolisi veriler={this.state.veriler} />
-              <MevcutHijyenKolisi veriler={this.state.veriler} />
+              <DagitilanGidaKolisi veriler={this.state.veriler.reverse()} />
+              <MevcutGidaKolisi veriler={this.state.veriler.reverse()} />
+              <DagitilanHijyenKolisi veriler={this.state.veriler.reverse()} />
+              <MevcutHijyenKolisi veriler={this.state.veriler.reverse()} />
+              <SonGirilenVeriler veriler={this.state.veriler.reverse()}/>
             </Col>
           </Row>
         </Container>
