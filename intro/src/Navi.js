@@ -11,7 +11,7 @@ export default class Navi extends Component {
             <NavLink>
               <h3 style={{color:"blue"}}>
                 <SiAlwaysdata className="mr-2"/>
-                Hatay Veri İstatiği
+                Hatay Veri İstatistiği
               </h3>
             </NavLink>
           </NavItem>

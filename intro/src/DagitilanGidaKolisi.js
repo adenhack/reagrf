@@ -28,19 +28,27 @@ export default class DagitilanGidaKolisi extends Component {
     ],
   };
 
-  componentDidMount() {
+   componentDidMount() {
     this.getTarih();
     this.getDagitilanGidaKolisi();
   }
 
-  getTarih = () => {
-    this.props.veriler.map((veri) => this.state.labels.push(veri.tarih));
+  getTarih = async () => {
+    try {
+      await this.props.veriler.map((veri) => this.state.labels.push(veri.tarih));
+    } catch (error) {
+      console.error(error);
+    }
   };
 
-  getDagitilanGidaKolisi = () => {
-    this.props.veriler.map((veri) =>
-      this.state.datasets[0].data.push(veri.dagitilangidakolisi)
-    );
+  getDagitilanGidaKolisi = async () => {
+    try {
+      await this.props.veriler.map((veri) =>
+        this.state.datasets[0].data.push(veri.dagitilangidakolisi)
+      );
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   render() {

@@ -33,12 +33,12 @@ export default class MevcutGidaKolisi extends Component {
     this.getMevcutGidaKolisi();
   }
 
-  getTarih = () => {
-    this.props.veriler.map((veri) => this.state.labels.push(veri.tarih));
+  getTarih = async () => {
+    await this.props.veriler.map((veri) => this.state.labels.push(veri.tarih));
   };
 
-  getMevcutGidaKolisi = () => {
-    this.props.veriler.map((veri) =>
+  getMevcutGidaKolisi =async () => {
+   await this.props.veriler.map((veri) =>
       this.state.datasets[0].data.push(veri.mevcuttakigidakolisi)
     );
   };

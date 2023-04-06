@@ -5,34 +5,46 @@ import "./Stok.css";
 export default class Stok extends Component {
   state = { toplamdagitilangidakolisi: "", toplamdagitilanhijyenkolisi: "", toplamgelentir: "" }
 
-  async componentDidMount() {
-    await this.tdgkolisi();
-    await this.tdhkolisi();
-    await this.tgtsayisi();
+  componentDidMount() {
+    this.tdgkolisi();
+    this.tdhkolisi();
+    this.tgtsayisi();
   }
 
-  tdgkolisi = async () => {
-    let toplam = 0;
-    await this.props.veriler.map(veri => (
-      toplam = veri.dagitilangidakolisi + toplam,
-      this.setState({ toplamdagitilangidakolisi: toplam })
-    ))
+  tdgkolisi = async () => { //toplam dağıtılan gıda kolisi
+    try {
+      let toplam = 0;
+      await this.props.veriler.map(veri => (
+        toplam = veri.dagitilangidakolisi + toplam,
+        this.setState({ toplamdagitilangidakolisi: toplam })
+      ))
+    } catch (error) {
+      console.error(error);
+    }
   }
 
-  tdhkolisi = async () => {
-    let toplam = 0;
-    await this.props.veriler.map(veri => (
-      toplam = veri.dagitilanhijyenkolisi + toplam,
-      this.setState({ toplamdagitilanhijyenkolisi: toplam })
-    ))
+  tdhkolisi = async () => { //toplam dağıtılan hijyen kolisi
+    try {
+      let toplam = 0;
+      await this.props.veriler.map(veri => (
+        toplam = veri.dagitilanhijyenkolisi + toplam,
+        this.setState({ toplamdagitilanhijyenkolisi: toplam })
+      ))
+    } catch (error) {
+      console.error(error);
+    }
   }
 
-  tgtsayisi = async () => {
-    let toplam = 0;
-    await this.props.veriler.map(veri => (
-      toplam = veri.gelentir + toplam,
-      this.setState({ toplamgelentir: toplam })
-    ))
+  tgtsayisi = async () => { //toplam gelen tır sayısı
+    try {
+      let toplam = 0;
+      await this.props.veriler.map(veri => (
+        toplam = veri.gelentir + toplam,
+        this.setState({ toplamgelentir: toplam })
+      ))
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   renderFull() {
