@@ -103,6 +103,7 @@ export default class Stok extends Component {
       <div className="m-5">
         <Table className="text-center mt-4">
           <thead>
+          <tr style={{backgroundColor:"lightcyan",color:"darkmagenta"}}><b>{this.props.veriler.length + 6} Gün</b></tr>
             <tr>
               <th>TARİH</th>
               <th>SOSYAL MARKET</th>
@@ -129,6 +130,17 @@ export default class Stok extends Component {
                 <td>{veri.toplamarac}</td>
               </tr>
             ))}
+            <tr>
+              <th>TOPLAM</th>
+              <th></th>
+              <th>{this.state.toplamgelentir}</th>
+              <th>{this.state.toplamdagitilangidakolisi}</th>
+              <th>{this.state.toplamdagitilanhijyenkolisi}</th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
           </tbody>
         </Table>
       </div>

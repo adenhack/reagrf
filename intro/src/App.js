@@ -6,6 +6,9 @@ import Navi from "./Navi";
 import MevcutGidaKolisi from "./MevcutGidaKolisi";
 import DagitilanHijyenKolisi from "./DagitilanHijyenKolisi";
 import MevcutHijyenKolisi from "./MevcutHijyenKolisi";
+import GelenTir from "./GelenTir";
+import ToplamPersonel from "./ToplamPersonel";
+import ToplamArac from "./ToplamArac";
 
 export default class App extends Component {
   state = {
@@ -42,10 +45,13 @@ export default class App extends Component {
                 veriler={this.state.veriler.reverse()}
                 search={this.state.search.reverse()}
               />
+              <GelenTir veriler={this.state.veriler}/>
               <DagitilanGidaKolisi veriler={this.state.veriler.reverse()} />
               <MevcutGidaKolisi veriler={this.state.veriler.reverse()} />
               <DagitilanHijyenKolisi veriler={this.state.veriler.reverse()} />
               <MevcutHijyenKolisi veriler={this.state.veriler.reverse()} />
+              <ToplamPersonel veriler={this.state.veriler.reverse()}/>
+              <ToplamArac veriler={this.state.veriler.reverse()}/>
             </Col>
           </Row>
         </Container>
