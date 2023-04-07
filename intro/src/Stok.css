@@ -3,11 +3,11 @@ tr:nth-child(even) {
 }
 
 tr:nth-child(odd) {
-    background-color: lightgoldenrodyellow;
-  }
+  background-color: lightgoldenrodyellow;
+}
 
-  tbody>tr:hover{
-    background-color: lightblue;
-    color: red;
-    font-size: 20px;
-  }
+tbody>tr:hover {
+  background-color: lightblue;
+  color: red;
+  font-size: 20px;
+}

@@ -15,9 +15,10 @@ export default class Stok extends Component {
     try {
       let toplam = 0;
       await this.props.veriler.map(veri => (
-        toplam = veri.dagitilangidakolisi + toplam,
-        this.setState({ toplamdagitilangidakolisi: toplam })
+        toplam = veri.dagitilangidakolisi + toplam
       ))
+      this.setState({ toplamdagitilangidakolisi: toplam })
+
     } catch (error) {
       console.error(error);
     }
@@ -27,9 +28,10 @@ export default class Stok extends Component {
     try {
       let toplam = 0;
       await this.props.veriler.map(veri => (
-        toplam = veri.dagitilanhijyenkolisi + toplam,
-        this.setState({ toplamdagitilanhijyenkolisi: toplam })
+        toplam = veri.dagitilanhijyenkolisi + toplam
       ))
+      this.setState({ toplamdagitilanhijyenkolisi: toplam })
+
     } catch (error) {
       console.error(error);
     }
@@ -39,9 +41,9 @@ export default class Stok extends Component {
     try {
       let toplam = 0;
       await this.props.veriler.map(veri => (
-        toplam = veri.gelentir + toplam,
-        this.setState({ toplamgelentir: toplam })
+        toplam = veri.gelentir + toplam
       ))
+      this.setState({ toplamgelentir: toplam })
     } catch (error) {
       console.error(error);
     }
@@ -52,6 +54,7 @@ export default class Stok extends Component {
       <div className="m-5">
         <Table className="text-center mt-4">
           <thead>
+            <tr style={{backgroundColor:"lightcyan",color:"darkmagenta"}}><b>{this.props.veriler.length + 6} Gün</b></tr>
             <tr>
               <th>TARİH</th>
               <th>SOSYAL MARKET</th>

@@ -5,7 +5,7 @@
       "sosyalmarket": 0,
       "gelentir": 1623,
       "dagitilangidakolisi": 117117,
-      "dagitilanhijyenkolisi": 36.2,
+      "dagitilanhijyenkolisi": 36,
       "mevcuttakigidakolisi": 0,
       "mevcuttakihijyenkolisi": 60,
       "toplampersonel": 0,
@@ -503,6 +503,17 @@
       "dagitilanhijyenkolisi": 1852,
       "mevcuttakigidakolisi": 96703,
       "mevcuttakihijyenkolisi": 29537,
+      "toplampersonel": 972,
+      "toplamarac": 188
+    },
+    {
+      "tarih": "06.04.2023",
+      "sosyalmarket": 52,
+      "gelentir": 30,
+      "dagitilangidakolisi": 11275,
+      "dagitilanhijyenkolisi": 1470,
+      "mevcuttakigidakolisi": 100815,
+      "mevcuttakihijyenkolisi": 29335,
       "toplampersonel": 972,
       "toplamarac": 188
     }
