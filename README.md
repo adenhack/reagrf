@@ -12,7 +12,7 @@ daha sonra intro isimli dosyaya gidip terminale
 ```javascript
 npm install react-scripts
 ```
-kodu çalıştırınız
+yazarak kodu çalıştırınız
 
 son olarak intro isimli dosyanın içinde terminale
 
