@@ -7,7 +7,7 @@ json-server --watch db.json
 ```
 yazınız
 
-daha sonra intro isimli dosyaya gidip 
+daha sonra intro isimli dosyaya gidip terminale
 
 ```javascript
 npm install react-scripts
