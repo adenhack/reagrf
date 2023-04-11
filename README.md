@@ -1,6 +1,6 @@
 ### Programı başlatmak için
 
-api klasörünün içindeki json dosyasını başlatmak için terminale
+api klasörünün içindeki json dosyasını başlatmak için api klasörünün içine giderek terminale
 
 ```javascript
 json-server --watch db.json
