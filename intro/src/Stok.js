@@ -51,11 +51,11 @@ export default class Stok extends Component {
 
   renderFull() {
     return (
-      <div className="m-5">
+      <div className="m-4">
         <Table className="text-center mt-4">
           <thead>
-            <tr style={{backgroundColor:"lightcyan",color:"darkmagenta"}}><b>{this.props.veriler.length + 6} Gün</b></tr>
-            <tr>
+            <tr style={{backgroundColor:"lightcyan",color:"darkmagenta",fontSize:"20px",fontWeight:"700"}}><b>{this.props.veriler.length + 6} Gün</b></tr>
+            <tr style={{backgroundColor:"lightsalmon",color:"black",fontSize:"15px",fontWeight:"700"}}>
               <th>TARİH</th>
               <th>SOSYAL MARKET</th>
               <th>GELEN TIR</th>

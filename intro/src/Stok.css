@@ -8,6 +8,7 @@ tr:nth-child(odd) {
 
 tbody>tr:hover {
   background-color: lightblue;
-  color: red;
+  color: blueviolet;
   font-size: 20px;
+  font-weight: 800;
 }
